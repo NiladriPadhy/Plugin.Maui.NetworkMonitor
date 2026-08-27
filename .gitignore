@@ -1,0 +1,15 @@
+.vs/
+.idea/
+.vscode/
+bin/
+obj/
+artifacts/
+nupkgs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.DS_Store
+TestResults/
+*.nupkg
+*.snupkg

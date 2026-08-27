@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui.NetworkMonitor.Sample.MainPage"
+             Title="Network Monitor"
+             BackgroundColor="#0B1220">
+
+    <Grid RowDefinitions="Auto,*" Padding="20" RowSpacing="16">
+        <VerticalStackLayout Spacing="12">
+            <Label Text="MAUI NETWORK MONITOR"
+                   TextColor="#94A3B8"
+                   FontSize="12"
+                   CharacterSpacing="1.4"
+                   FontFamily="OpenSansSemibold" />
+
+            <Border x:Name="HeroCard"
+                    StrokeThickness="0"
+                    BackgroundColor="#12203A"
+                    Padding="20">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="18" />
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="6">
+                    <Label x:Name="ReachabilityLabel"
+                           Text="Checking…"
+                           FontSize="28"
+                           TextColor="White"
+                           FontFamily="OpenSansSemibold" />
+                    <Label x:Name="SummaryLabel"
+                           Text="Waiting for the first path + probe"
+                           TextColor="#CBD5E1"
+                           FontSize="14" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="10" RowSpacing="10">
+                <Border Grid.Row="0" Grid.Column="0" StrokeThickness="0" BackgroundColor="#12203A" Padding="14">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="14" />
+                    </Border.StrokeShape>
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="TRANSPORT" TextColor="#64748B" FontSize="11" />
+                        <Label x:Name="TransportLabel" Text="—" TextColor="White" FontSize="18" FontFamily="OpenSansSemibold" />
+                    </VerticalStackLayout>
+                </Border>
+                <Border Grid.Row="0" Grid.Column="1" StrokeThickness="0" BackgroundColor="#12203A" Padding="14">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="14" />
+                    </Border.StrokeShape>
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="CAPTIVE PORTAL" TextColor="#64748B" FontSize="11" />
+                        <Label x:Name="CaptiveLabel" Text="—" TextColor="White" FontSize="18" FontFamily="OpenSansSemibold" />
+                    </VerticalStackLayout>
+                </Border>
+                <Border Grid.Row="1" Grid.Column="0" StrokeThickness="0" BackgroundColor="#12203A" Padding="14">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="14" />
+                    </Border.StrokeShape>
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="EXPENSIVE" TextColor="#64748B" FontSize="11" />
+                        <Label x:Name="ExpensiveLabel" Text="—" TextColor="White" FontSize="18" FontFamily="OpenSansSemibold" />
+                    </VerticalStackLayout>
+                </Border>
+                <Border Grid.Row="1" Grid.Column="1" StrokeThickness="0" BackgroundColor="#12203A" Padding="14">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="14" />
+                    </Border.StrokeShape>
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="CONSTRAINED" TextColor="#64748B" FontSize="11" />
+                        <Label x:Name="ConstrainedLabel" Text="—" TextColor="White" FontSize="18" FontFamily="OpenSansSemibold" />
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+
+            <Button x:Name="RefreshButton"
+                    Text="Refresh now"
+                    Clicked="OnRefreshClicked"
+                    BackgroundColor="#2563EB"
+                    TextColor="White"
+                    CornerRadius="12"
+                    HeightRequest="46" />
+        </VerticalStackLayout>
+
+        <Border Grid.Row="1"
+                StrokeThickness="0"
+                BackgroundColor="#12203A"
+                Padding="16">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="18" />
+            </Border.StrokeShape>
+            <Grid RowDefinitions="Auto,*" RowSpacing="10">
+                <Label Text="CHANGE LOG"
+                       TextColor="#94A3B8"
+                       FontSize="12"
+                       FontFamily="OpenSansSemibold" />
+                <CollectionView x:Name="EventList" Grid.Row="1">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="0,8" ColumnDefinitions="Auto,*" ColumnSpacing="10">
+                                <BoxView WidthRequest="8"
+                                         HeightRequest="8"
+                                         VerticalOptions="Center"
+                                         Color="#38BDF8"
+                                         CornerRadius="4" />
+                                <Label Grid.Column="1"
+                                       Text="{Binding}"
+                                       TextColor="#E2E8F0"
+                                       FontSize="13"
+                                       LineBreakMode="WordWrap" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+        </Border>
+    </Grid>
+</ContentPage>
