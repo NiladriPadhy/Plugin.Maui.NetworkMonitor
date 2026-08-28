@@ -17,11 +17,11 @@
 
     <PackageId>Plugin.Maui.NetworkMonitor</PackageId>
     <Title>Plugin.Maui.NetworkMonitor</Title>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Description>MAUI library for Android and iOS that reports real internet availability, captive portals, network changes, and Wi-Fi/cellular transitions — not just "connected to a network".</Description>
     <PackageTags>maui;android;ios;network;connectivity;captive-portal;wifi;cellular;internet;reachability</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>Initial release: real internet probes, captive-portal detection, and Wi-Fi/cellular transition events for MAUI on Android and iOS.</PackageReleaseNotes>
+    <PackageReleaseNotes>Include the Buy Me a Coffee support section in the package README.</PackageReleaseNotes>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
