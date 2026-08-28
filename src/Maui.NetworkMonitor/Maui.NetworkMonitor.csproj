@@ -17,11 +17,11 @@
 
     <PackageId>Plugin.Maui.NetworkMonitor</PackageId>
     <Title>.NET MAUI NetworkMonitor — real internet and captive portals</Title>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Description>MAUI library for Android and iOS that reports real internet availability, captive portals, network changes, and Wi-Fi/cellular transitions — not just "connected to a network".</Description>
     <PackageTags>dotnet-maui;maui;maui-plugin;maui-utilities;cross-platform;android;ios;nuget;mauiessentials;network;connectivity;captive-portal;wifi;cellular;internet;reachability</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>LLM-friendly README, llms.txt, AGENTS.md, and improved NuGet title/tags for coding-agent discoverability.</PackageReleaseNotes>
+    <PackageReleaseNotes>Rebrand package metadata and catalog references to MauiEssentials.</PackageReleaseNotes>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
