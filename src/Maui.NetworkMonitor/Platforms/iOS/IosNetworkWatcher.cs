@@ -7,7 +7,7 @@ namespace Maui.NetworkMonitor;
 internal sealed class IosNetworkWatcher : IPlatformNetworkWatcher
 {
     private readonly object _gate = new();
-    private readonly DispatchQueue _queue = new("com.nugetworld.maui.networkmonitor");
+    private readonly DispatchQueue _queue = new("com.mauiessentials.maui.networkmonitor");
     private NWPathMonitor? _monitor;
     private PlatformSnapshot _current = PlatformSnapshot.Empty;
 

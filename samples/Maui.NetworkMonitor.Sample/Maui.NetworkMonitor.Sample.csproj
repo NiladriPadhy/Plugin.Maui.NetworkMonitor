@@ -14,7 +14,7 @@
     <IsPackable>false</IsPackable>
 
     <ApplicationTitle>Network Monitor</ApplicationTitle>
-    <ApplicationId>com.nugetworld.maui.networkmonitor.sample</ApplicationId>
+    <ApplicationId>com.mauiessentials.maui.networkmonitor.sample</ApplicationId>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
     <ApplicationVersion>1</ApplicationVersion>
 

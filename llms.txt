@@ -5,7 +5,7 @@ Reports real internet availability, captive portals, and Wi-Fi vs cellular trans
 Repository: https://github.com/NiladriPadhy/Maui.NetworkMonitor
 NuGet: https://www.nuget.org/packages/Plugin.Maui.NetworkMonitor
 Paper: https://niladripadhy.vercel.app/opensource/plugin-maui-network-monitor
-Catalog: https://github.com/NiladriPadhy/NugetWorld
+Catalog: https://github.com/NiladriPadhy/MauiEssentials
 License: MIT
 
 ## Supported versions
