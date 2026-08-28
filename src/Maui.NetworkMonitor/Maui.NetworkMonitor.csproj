@@ -16,12 +16,12 @@
     <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
 
     <PackageId>Plugin.Maui.NetworkMonitor</PackageId>
-    <Title>Plugin.Maui.NetworkMonitor</Title>
-    <Version>1.0.1</Version>
+    <Title>.NET MAUI NetworkMonitor — real internet and captive portals</Title>
+    <Version>1.0.2</Version>
     <Description>MAUI library for Android and iOS that reports real internet availability, captive portals, network changes, and Wi-Fi/cellular transitions — not just "connected to a network".</Description>
-    <PackageTags>maui;android;ios;network;connectivity;captive-portal;wifi;cellular;internet;reachability</PackageTags>
+    <PackageTags>dotnet-maui;maui;maui-plugin;maui-utilities;cross-platform;android;ios;nuget;nugetworld;network;connectivity;captive-portal;wifi;cellular;internet;reachability</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>Include the Buy Me a Coffee support section in the package README.</PackageReleaseNotes>
+    <PackageReleaseNotes>LLM-friendly README, llms.txt, AGENTS.md, and improved NuGet title/tags for coding-agent discoverability.</PackageReleaseNotes>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
