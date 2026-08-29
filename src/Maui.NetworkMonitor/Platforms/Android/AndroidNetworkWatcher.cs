@@ -11,6 +11,7 @@ internal sealed class AndroidNetworkWatcher : IPlatformNetworkWatcher
     private readonly Callback _callback;
     private ConnectivityManager? _connectivityManager;
     private bool _started;
+    private int _registerGeneration;
     private PlatformSnapshot _current = PlatformSnapshot.Empty;
 
     public AndroidNetworkWatcher()
@@ -39,6 +40,7 @@ internal sealed class AndroidNetworkWatcher : IPlatformNetworkWatcher
         var connectivity = context.GetSystemService(Context.ConnectivityService) as ConnectivityManager
             ?? throw new InvalidOperationException("ConnectivityManager is not available.");
 
+        int generation;
         lock (_gate)
         {
             if (_started)
@@ -48,10 +50,45 @@ internal sealed class AndroidNetworkWatcher : IPlatformNetworkWatcher
 
             _connectivityManager = connectivity;
             _started = true;
+            _registerGeneration++;
+            generation = _registerGeneration;
+        }
+
+        try
+        {
+            RegisterCallback(connectivity);
+        }
+        catch
+        {
+            lock (_gate)
+            {
+                if (_registerGeneration == generation)
+                {
+                    _started = false;
+                    _connectivityManager = null;
+                }
+            }
+
+            throw;
+        }
+
+        lock (_gate)
+        {
+            if (!_started || _registerGeneration != generation)
+            {
+                try
+                {
+                    connectivity.UnregisterNetworkCallback(_callback);
+                }
+                catch (Java.Lang.IllegalArgumentException)
+                {
+                }
+
+                return;
+            }
         }
 
         Publish(ReadSnapshot(connectivity));
-        RegisterCallback(connectivity);
     }
 
     public void Stop()
@@ -66,6 +103,7 @@ internal sealed class AndroidNetworkWatcher : IPlatformNetworkWatcher
 
             manager = _connectivityManager;
             _started = false;
+            _registerGeneration++;
             _connectivityManager = null;
         }
 

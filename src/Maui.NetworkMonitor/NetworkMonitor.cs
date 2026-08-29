@@ -20,6 +20,7 @@ public sealed class NetworkMonitor : INetworkMonitor
     private Task? _reprobeLoop;
     private NetworkStatus _current = NetworkStatus.Unknown;
     private bool _disposed;
+    private long _refreshGeneration;
 
     /// <summary>Creates a monitor with default options.</summary>
     public NetworkMonitor()
@@ -200,6 +201,7 @@ public sealed class NetworkMonitor : INetworkMonitor
 
     private async Task<NetworkStatus> RefreshCoreAsync(CancellationToken cancellationToken)
     {
+        var generation = Interlocked.Increment(ref _refreshGeneration);
         var snapshot = _watcher.Current;
         ProbeResult? probe = null;
 
@@ -220,7 +222,11 @@ public sealed class NetworkMonitor : INetworkMonitor
         }
 
         var next = StatusComposer.Compose(snapshot, probe);
-        Publish(next);
+        if (generation == Volatile.Read(ref _refreshGeneration))
+        {
+            Publish(next);
+        }
+
         return next;
     }
 
