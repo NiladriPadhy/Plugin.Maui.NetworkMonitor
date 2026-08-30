@@ -10,7 +10,7 @@
     <Copyright>Copyright (c) Niladri</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageProjectUrl>https://github.com/nuvyntralabs/Plugin.Maui.NetworkMonitor</PackageProjectUrl>
+    <PackageProjectUrl>https://nuvyntralabs.github.io/packages/plugin-maui-network-monitor/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/nuvyntralabs/Plugin.Maui.NetworkMonitor</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <NeutralLanguage>en</NeutralLanguage>
