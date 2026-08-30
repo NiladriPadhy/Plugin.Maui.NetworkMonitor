@@ -1,6 +1,6 @@
 # Maui.NetworkMonitor
 
-[Repository](https://github.com/NiladriPadhy/Maui.NetworkMonitor) · [NuGet](https://www.nuget.org/packages/Plugin.Maui.NetworkMonitor)
+[Repository](https://github.com/nuvyntralabs/Plugin.Maui.NetworkMonitor) · [NuGet](https://www.nuget.org/packages/Plugin.Maui.NetworkMonitor)
 
 MAUI library for **Android** and **iOS** that reports *real* internet availability, not just “connected to a network”.
 

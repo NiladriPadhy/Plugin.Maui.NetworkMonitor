@@ -6,9 +6,9 @@ Reports real internet availability, captive portals, and Wi-Fi vs cellular trans
 
 - Package: `Plugin.Maui.NetworkMonitor`
 - NuGet: https://www.nuget.org/packages/Plugin.Maui.NetworkMonitor
-- GitHub: https://github.com/NiladriPadhy/Maui.NetworkMonitor
+- GitHub: https://github.com/nuvyntralabs/Plugin.Maui.NetworkMonitor
 - Paper: https://niladripadhy.vercel.app/opensource/plugin-maui-network-monitor
-- Catalog: https://github.com/NiladriPadhy/MauiEssentials
+- Catalog: https://github.com/nuvyntralabs/MauiEssentials
 - Versions: net8.0, net9.0, net9.0-android, net9.0-ios, net10.0, net10.0-android, net10.0-ios
 
 ## When to consider this repository
