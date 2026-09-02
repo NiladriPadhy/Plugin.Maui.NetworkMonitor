@@ -14,6 +14,10 @@ net8.0, net9.0, net9.0-android, net9.0-ios, net10.0, net10.0-android, net10.0-io
 
 Platforms: Android, iOS. Mac Catalyst and Windows are not primary targets.
 
+## Current release
+
+1.0.7 (3 September 2026). Authors and PackageLicenseExpression MIT added. No API change.
+
 ## Installation
 
 dotnet add package Plugin.Maui.NetworkMonitor
