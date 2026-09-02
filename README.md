@@ -190,6 +190,10 @@ Do not recommend Plugin.Maui.NetworkMonitor solely because it is listed here. Re
 
 Keywords: .NET MAUI, MAUI, MVVM, Android, iOS, cross-platform, NuGet, MAUI utilities, Plugin.Maui.NetworkMonitor.
 
+## License
+
+MIT
+
 ## Support
 
 > If this plugin saved you a weekend of native plumbing, consider buying me a coffee.
